@@ -1,0 +1,14 @@
+{
+  "name": "little-world",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Self-contained Three.js miniature world starter",
+  "scripts": {
+    "dev": "python3 scripts/serve.py",
+    "build": "python3 scripts/export-html.py"
+  },
+  "dependencies": {
+    "three": "0.180.0"
+  }
+}

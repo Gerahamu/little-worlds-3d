@@ -1,0 +1,121 @@
+{
+  "date": "2026-10-22",
+  "baseline": {
+    "ready": true,
+    "buildings": 3,
+    "toon": {
+      "materialCount": 68,
+      "gradientSteps": 3
+    },
+    "peopleCount": 18,
+    "spawnFailed": 0,
+    "movingPeople": 13,
+    "movingVehicles": 4,
+    "turningVehicles": 0,
+    "dragChangedCamera": true,
+    "zoom": 1.586673441609339,
+    "reset": {
+      "position": [
+        70.00000000000001,
+        54.99999999999999,
+        82
+      ],
+      "zoom": 1
+    },
+    "day": {
+      "nightAmount": 0,
+      "windowColor": "263b40",
+      "unlitColor": "263b40",
+      "windowEmission": 0,
+      "bulbColor": "737c80",
+      "bulbEmission": 0,
+      "weather": "clear",
+      "rainPoints": 0
+    },
+    "trafficPaused": true,
+    "trafficHidden": true,
+    "trafficResumedMode": "active",
+    "peoplePaused": true,
+    "peopleHidden": true,
+    "peopleResumedMode": "active",
+    "night": {
+      "nightAmount": 1,
+      "windowColor": "d38b39",
+      "unlitColor": "263b40",
+      "windowEmission": 1.1,
+      "bulbColor": "f1cc8c",
+      "bulbEmission": 2.6,
+      "weather": "clear",
+      "rainPoints": 0
+    },
+    "mobileNoOverflow": true,
+    "errors": [],
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "configured": {
+    "ready": true,
+    "title": "Portable World — Little Worlds",
+    "autoOrbit": true,
+    "configured": {
+      "seed": 173,
+      "width": 36,
+      "depth": 30,
+      "people": 12,
+      "vehicles": 3
+    },
+    "lighting": {
+      "nightAmount": 1,
+      "windowColor": "d38b39",
+      "unlitColor": "263b40",
+      "windowEmission": 1.1,
+      "bulbColor": "f1cc8c",
+      "bulbEmission": 2.6,
+      "weather": "rain",
+      "rainPoints": 300
+    },
+    "movingPeople": 9,
+    "movingCars": 3,
+    "turningCars": 3,
+    "crossingPeople": 2,
+    "signalStages": [
+      "LOOP",
+      "LOOP_AMBER",
+      "LOOP_CLEAR",
+      "PED",
+      "PED_CLEAR"
+    ],
+    "vehicleModes": [
+      "driving",
+      "braking"
+    ],
+    "spawnFailures": 0,
+    "pageErrors": [],
+    "failedRequests": []
+  },
+  "offline": {
+    "offline": true,
+    "protocol": "file:",
+    "title": "Portable World — Little Worlds",
+    "ready": true,
+    "buildings": 3,
+    "toon": {
+      "materialCount": 68,
+      "gradientSteps": 3
+    },
+    "peopleMoved": true,
+    "vehiclesMoved": true,
+    "day": {
+      "nightAmount": 0,
+      "windowColor": "263b40",
+      "unlitColor": "263b40",
+      "windowEmission": 0,
+      "bulbColor": "737c80",
+      "bulbEmission": 0,
+      "weather": "rain",
+      "rainPoints": 300
+    },
+    "networkRequests": [],
+    "pageErrors": []
+  }
+}

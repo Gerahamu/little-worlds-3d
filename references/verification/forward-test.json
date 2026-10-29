@@ -1,0 +1,31 @@
+{
+  "method": "Independent agent, fresh context, installed Skill only",
+  "configured": {
+    "title": "Skill Forward Test",
+    "people": 6,
+    "vehicles": 2,
+    "weather": "mist"
+  },
+  "initialized": true,
+  "browserReady": true,
+  "spawnFailures": 0,
+  "movement": true,
+  "dayNight": true,
+  "cameraControls": true,
+  "threeStateControls": true,
+  "narrowViewport": true,
+  "standaloneExport": {
+    "modules": 30,
+    "bytes": 2950729,
+    "offlineFileProtocol": true,
+    "httpRequests": 0,
+    "pageErrors": 0
+  },
+  "temporaryResourcesRemoved": true,
+  "blockingSkillGaps": [],
+  "notes": [
+    "Shared MCP automation profile was occupied; the independent tester used a separately launched browser and isolated contexts.",
+    "Neutral demo copy is intended to be replaced per scene.",
+    "Automatic orbit has an intentional initial delay."
+  ]
+}

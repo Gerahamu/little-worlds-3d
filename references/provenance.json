@@ -1,0 +1,78 @@
+{
+  "project": "Seoul Neighborhood",
+  "snapshot": "2026-10-22",
+  "sources": {
+    "app.js": "3da0a2597dee25303a07ca1ccb200492cb6e1939e26c6c78a973c6e682a12b33",
+    "simulation.js": "fddf49b8858289f9f456e37cb8dfd10ce54b0970d470e535803467d01d58f663",
+    "compiled-shell.html": "2c7cf60442e34ab6127f995a0b3882f3641e6d84d05973b3271f454b37e743ff"
+  },
+  "extractedFunctions": {
+    "core/random.js": [
+      "random",
+      "roomRandomScore"
+    ],
+    "core/geometry.js": [
+      "transform",
+      "at",
+      "box",
+      "cyl",
+      "ball",
+      "instance",
+      "pipe",
+      "cable",
+      "flush"
+    ],
+    "world/signage.js": [
+      "textureCanvas",
+      "signMat",
+      "sign",
+      "projectingSign",
+      "outlineNeon",
+      "warmPool"
+    ],
+    "world/architecture.js": [
+      "windowRoomId",
+      "architecturalSkin",
+      "architecturalWindow",
+      "acUnit",
+      "waterTank",
+      "roofGarden",
+      "rooftop"
+    ],
+    "world/props.js": [
+      "tree",
+      "planter",
+      "bench",
+      "lamp"
+    ],
+    "actors/models.js": [
+      "part",
+      "pivot",
+      "character",
+      "pose",
+      "car",
+      "syncDynamic"
+    ],
+    "systems/simulation.js": [
+      "routePoint",
+      "assignRoute",
+      "advanceSignal",
+      "trafficSignal",
+      "updateSignals",
+      "prepareAgentRestore",
+      "updateCars",
+      "walkCandidate",
+      "updatePeople"
+    ]
+  },
+  "adaptation": "Module factories replace globals; hard-coded map and locale strings removed. Scene generation, path descriptors, configuration, weather and HTML exporter are reusable adapters, not claims of verbatim Seoul code.",
+  "adaptedRuntime": [
+    "fit",
+    "reset",
+    "animate",
+    "updateLighting",
+    "setTime",
+    "updateAgentButton",
+    "cycleAgents"
+  ]
+}

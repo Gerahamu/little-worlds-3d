@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Little World</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23d4b687' d='M16 2 30 9v14l-14 7L2 23V9z'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="./styles.css">
+<script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.js","three/addons/":"./vendor/three/examples/jsm/"}}</script>
+</head><body><main id="city" aria-label="Interactive miniature world"></main><div class="frame"></div>
+<header class="top"><span class="brand">◇ LITTLE WORLDS</span><span class="status"><i></i><span id="time-label">NIGHT</span></span></header>
+<div class="hint">DRAG TO EXPLORE · SCROLL TO LOOK CLOSER</div>
+<details class="notes"><summary>World notes ↗</summary><p>Drag / touch to rotate. Scroll / pinch to zoom. Right-drag to pan.</p><p>1 Day · 2 Night · R Reset · Space Pause.</p><p>Traffic and People: Moving → Paused → Hidden → Moving. Orbit moves the camera automatically.</p></details>
+<section class="title"><div class="kicker">AN ORDINARY PLACE, IN MINIATURE</div><h1 id="world-title">Little World</h1><p id="subtitle"></p></section>
+<nav class="toolbar" aria-label="World controls">
+<button class="tool mode" data-time="day" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 1v3m0 16v3M1 12h3m16 0h3M4 4l2 2m12 12 2 2M20 4l-2 2M6 18l-2 2"/></svg>Day</button>
+<button class="tool mode" data-time="night" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.3A9 9 0 0 1 9.8 3a9 9 0 1 0 10.7 11.3Z"/></svg>Night</button><i class="divider"></i>
+<button class="tool" id="orbit" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3c-3-1-5 1-5 4v10c0 4 3 5 6 3l11-6c3-2 2-4 0-5L8 3Z"/></svg><span>Orbit <i class="tiny-dot"></i></span></button>
+<button class="tool" id="traffic" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="15" rx="3"/><path d="M4 11h16M8 18l-2 3m10-3 2 3M12 3v8"/><path d="M7 14h2m6 0h2"/></svg><span>Traffic <i class="tiny-dot"></i></span></button>
+<button class="tool" id="people" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="5" r="2.5"/><path d="m5 21 1-6v-4c0-3 6-3 6 0v4l1 6M3 16l2-6m9-3c5-2 5 6 7 8m-5-2 1 8"/></svg><span>People <i class="tiny-dot"></i></span></button><i class="divider"></i>
+<button class="tool" id="reset"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7a9 9 0 1 1-1 8M4 2v5h5M12 7v5l3 2"/></svg>Reset</button></nav>
+<div id="toast" class="toast" role="status" aria-live="polite"></div><div id="loading"><h2 id="loading-title">Little World</h2><p id="loading-text">THE WORLD IS WAKING UP</p><div class="line"></div><div id="error" role="alert"></div></div>
+<script>
+function showStartError(message){if(window.littleWorld?.ready)return;document.querySelector('#loading-text').textContent='Unable to start this world';document.querySelector('#error').textContent=message;}
+addEventListener('error',e=>showStartError(e.message||'A required source file could not be loaded.'),true);
+addEventListener('unhandledrejection',e=>showStartError(e.reason?.message||String(e.reason)));
+</script>
+<script type="module" src="./src/main.js"></script></body></html>

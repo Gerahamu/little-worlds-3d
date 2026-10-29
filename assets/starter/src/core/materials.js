@@ -1,0 +1,11 @@
+import * as THREE from 'three';
+export function createMaterials(palette={}){
+const gradient=new THREE.DataTexture(new Uint8Array([85,170,255]),3,1,THREE.RedFormat);gradient.minFilter=gradient.magFilter=THREE.NearestFilter;gradient.needsUpdate=true;
+const materials=new Map(),emissives=[],nightLights=[];
+function mat(color,extra={}){const key=color+JSON.stringify(Object.entries(extra).map(([k,v])=>[k,v?.isTexture?v.uuid:v]));if(materials.has(key))return materials.get(key);const m=new THREE.MeshToonMaterial({color:palette[color]??color,gradientMap:gradient,...extra});if(extra.emissive){m.userData.nightEmission=extra.emissiveIntensity??1;emissives.push(m);}materials.set(key,m);return m;}
+const M={stone:mat('#768087'),stoneLight:mat('#a2a49b'),concrete:mat('#aaa99d'),sand:mat('#b2aa98'),slate:mat('#66717a'),dark:mat('#243447'),black:mat('#151f2b'),iron:mat('#34454c'),metal:mat('#9bacae'),wood:mat('#915e3a'),woodLight:mat('#c3945c'),red:mat('#b63828'),orange:mat('#e48b2f'),cream:mat('#dfca98'),green:mat('#45745e'),jade:mat('#477c77'),blue:mat('#266ca1'),tank:mat('#397fa5'),brick:mat('#87695b'),maroon:mat('#793f3c'),white:mat('#e0dfd2'),glass:mat('#293b48'),warm:mat('#d38b39',{emissive:'#ff9e26',emissiveIntensity:1.1}),warmDim:mat('#ad7641',{emissive:'#f7b65e',emissiveIntensity:.55}),windowDark:mat('#263b40'),neonRed:mat('#e9482b',{emissive:'#ff3216',emissiveIntensity:2.4}),neonBlue:mat('#4774db',{emissive:'#457bff',emissiveIntensity:2.1}),neonPink:mat('#b556ad',{emissive:'#ff39b4',emissiveIntensity:1.9}),lamp:mat('#f1cc8c',{emissive:'#ffd38c',emissiveIntensity:2.6}),leaf:mat('#65853d'),leaf2:mat('#91a746'),leafDark:mat('#456733'),blossom:mat('#ce9fa9'),blossom2:mat('#e9b8bc'),skin1:mat('#dbab87'),skin2:mat('#bd8968'),skin3:mat('#90624b'),skin4:mat('#ecc2a0'),hair:mat('#292b30'),hair2:mat('#655043'),hair3:mat('#979c9c')};
+const streetLampBulb=mat('#737c80',{emissive:'#ffd38c',emissiveIntensity:2.6});
+const streetLampDayColor=new THREE.Color('#737c80'),streetLampNightColor=new THREE.Color('#f1cc8c');
+const windowNightColors=[M.warm.color.clone(),M.warmDim.color.clone()];
+return {M,mat,gradient,materials,emissives,nightLights,streetLampBulb,streetLampDayColor,streetLampNightColor,windowNightColors};
+}

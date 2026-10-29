@@ -1,0 +1,4 @@
+interface:
+  display_name: "Little Worlds 3D"
+  short_description: "Reusable Three.js diorama starter and scene systems"
+  default_prompt: "Use $little-worlds-3d to create a new interactive miniature world from the bundled starter."
